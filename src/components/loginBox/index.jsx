@@ -1,5 +1,6 @@
 import React from 'react';
 import './loginBox.css';
+import { useNavigate } from 'react-router-dom';
 import { registerRequest, loginRequest } from '../../utils';
 
 const LoginBox = () => {
@@ -7,6 +8,7 @@ const LoginBox = () => {
   const [password, setPassword] = React.useState('');
   const [login, setLogin] = React.useState('Login');
   const [res, setRes] = React.useState(null);
+  const navigate = useNavigate();
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -23,16 +25,13 @@ const LoginBox = () => {
   const handleSubmit = async () => {
     if (login === 'Login') {
       const response = await loginRequest({ data: { username: email, password } });
-      if (response !== 'success') {
-        setRes(response);
+      response === 'success' ? setRes(null) : setRes(response);
+      if (response === 'success') {
+        navigate('/cms');
       }
-      console.log(response);
     } else {
       const response = await registerRequest({ data: { username: email, password } });
-      if (response !== 'success') {
-        setRes(response);
-      }
-      console.log(response);
+      response === 'success' ? setRes('Login Now') : setRes(response);
     }
   };
 

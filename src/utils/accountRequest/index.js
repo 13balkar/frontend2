@@ -25,7 +25,8 @@ const loginRequest = async (dynamicConfig) => {
     localStorage.setItem('token', data.token);
     return 'success';
   } catch (error) {
-    console.log(error.response.data);
+    localStorage.removeItem('token');
+    // console.log(error.response.data);
     return error.response.data;
   }
 };

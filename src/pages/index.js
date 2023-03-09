@@ -1,3 +1,4 @@
 import Homepage from './homepage';
+import Cms from './cmsPage';
 
-export { Homepage };
+export { Homepage, Cms };
