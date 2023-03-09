@@ -1,0 +1,23 @@
+.login-image{
+    display: flex;
+    width: 60%;
+    flex-direction: column; 
+    font-size: 1.5rem;  
+    align-items: center;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.content h1{
+    font-size: 2.5rem;
+    padding-bottom: 18px;
+    padding-left: 140px;
+}
+img{
+    width: 700px;
+}

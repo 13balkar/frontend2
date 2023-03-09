@@ -1,0 +1,47 @@
+.login-box{
+    background-color: #272727;
+    height: 116vh;
+    width: 40%;
+    color: #c8c8c8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -150px;
+}
+h1{
+    font-size: 2.5rem;  
+}
+a{
+    color: #c8c8c8;
+    text-decoration: none;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    width: 350px;
+}
+button{
+   margin-top: 15px;
+   margin-bottom: 30px;
+   padding: 16px;
+   background-color: #734cff;
+   color: white;
+   border-radius: 10px;
+}
+input{
+    margin-bottom: 30px;
+    padding: 16px;
+    border-radius: 10px;
+}
+label{
+    padding-bottom: 10px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    align-items: center;
+}
