@@ -1,0 +1,19 @@
+.entry-card{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.7rem;
+    padding-right: 2.7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: #ffffff;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    width: 4%;
+}

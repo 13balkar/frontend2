@@ -19,3 +19,8 @@ export const CHANGE_CONTENT_NAME = (name) => ({
   url: `/content/${name}/changeName`,
   method: 'patch'
 });
+
+export const COLLECTION_ENTRIES = (name) => ({
+  url: `/collection/${name}`,
+  method: 'get'
+});
