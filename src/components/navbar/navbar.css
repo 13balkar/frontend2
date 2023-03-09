@@ -1,0 +1,34 @@
+.navbar{
+    background-color:#272727;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.heading{
+    background-color: #5905ce;
+    color: #ffffff;
+    padding: 1rem;
+}
+.heading h1{
+    font-size: 2rem;
+}
+.builder{
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 1rem;
+    padding-top: .8rem;
+    padding-bottom: .8rem;
+    font-size: 1.4rem;
+}
+.list{
+    color:#adadad;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.c_name{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+}

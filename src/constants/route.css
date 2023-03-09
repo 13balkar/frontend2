@@ -1,0 +1,10 @@
+.login{
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+}

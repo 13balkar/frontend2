@@ -1,6 +1,7 @@
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import React from 'react';
+import './route.css';
 
 const ProtectedRoutes = ({ children }) => {
   const [token, setToken] = React.useState(null);
@@ -12,7 +13,9 @@ const ProtectedRoutes = ({ children }) => {
       });
   }, []);
   return token === null
-    ? <h1>You are not Logged In</h1>
+    ? <div className='login'>
+      <h1>You are not Logged In</h1>
+     </div>
     : children;
 };
 
