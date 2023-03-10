@@ -60,3 +60,18 @@
 .type{
     color: #a6a6a6;
 }
+
+.button-pen{
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+    margin-top: 5px;
+}
+
+.buttons{
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+

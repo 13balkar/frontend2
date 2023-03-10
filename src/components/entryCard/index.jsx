@@ -26,8 +26,8 @@ const EntryCard = ({ entry, headings }) => {
       })
       }
       <div className='actions'>
-        <p onClick={ () => setOpenModal(true)} className='btn btn-primary'>e</p>
-        <p onClick={ handleDelete } className='btn btn-danger'>d</p>
+        <img onClick={ () => setOpenModal(true)} className='button' src='/assets/pencil-box.png' />
+        <img onClick={ handleDelete } className='button' src='/assets/delete.png' />
       </div>
       {openModal && <UpdateEntry view={entry.collection_name} setOpenModal={setOpenModal} entry= {entry} />}
 

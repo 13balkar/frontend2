@@ -21,7 +21,7 @@ const ContentBuilder = ({ view }) => {
     <div className='content-builder'>
       <div className='content-name'>
         <h1>{view.name}</h1>
-        <p>e</p>
+        <img src='/assets/pencil.png' className='button-pen' />
       </div>
       <h2>{view.count} Fields</h2>
       <p className='add-types' >Add another field</p>
@@ -37,8 +37,8 @@ const ContentBuilder = ({ view }) => {
               <p className='type'>{item.type}</p>
               </div>
               <div className='part2'>
-                <p>e</p>
-                <p>d</p>
+              <img className='buttons' src='/assets/pencil-box.png' />
+              <img className='buttons' src='/assets/delete.png' />
               </div>
             </div>
           );

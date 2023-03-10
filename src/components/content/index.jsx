@@ -36,7 +36,7 @@ const Content = () => {
         <div className='content-list'>
           <div className='content-number'>
           <p>{ Object.keys(names).length } Types</p>
-          <p>s</p>
+          <img className='button' src='/assets/icon-search-dark.png' />
           </div>
           <p className='add-type'onClick={handleAdd} >+ New Type</p>
           { Object.keys(names).map((item, index) => {
