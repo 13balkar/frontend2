@@ -1,7 +1,7 @@
 import React from 'react';
 import './content.css';
 import makeRequest from '../../utils/makeRequest';
-import AddNewContent from '../AddNewContent';
+import AddNewContent from '../addNewContent';
 import ContentBuilder from '../contentBuilder';
 import { GET_COLLECTIONS, GET_CONTENTS } from '../../constants/apiEndPoints';
 const Content = () => {

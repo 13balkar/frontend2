@@ -1,7 +1,8 @@
 import React from 'react';
 import './contentBuilder.css';
 import ChangeContentName from '../changeContentName';
-import AddColumn from '../AddField';
+import AddColumn from '../addField';
+import UpdateColumn from '../updateContentField';
 import propTypes from 'prop-types';
 import makeRequest from '../../utils/makeRequest';
 import { GET_CONTENT_BY_NAME, DELETE_FIELD } from '../../constants/apiEndPoints';
@@ -9,6 +10,7 @@ const ContentBuilder = ({ view }) => {
   const [content, setContent] = React.useState(null);
   const [openModal, setOpenModal] = React.useState(false);
   const [openAddModal, setOpenAddModal] = React.useState(false);
+  const [openUpdateModal, setOpenUpdateModal] = React.useState(null);
 
   const makeMap = { text: 'Aa', number: '12', email: '@ ', password: '* ', json: '{}', array: '[]', string: 'Aa' };
   const colorMap = { text: '#7691ff', string: '#7691ff', number: '#d0c121', email: '#9f6be7', password: '#ff9a76', json: '#ff9a76', array: '#ff9a76' };
@@ -51,7 +53,7 @@ const ContentBuilder = ({ view }) => {
               <p className='type'>{item.type}</p>
               </div>
               <div className='part2'>
-              <img className='buttons' src='/assets/pencil-box.png' />
+              {view.count === 0 && <img className='buttons' src='/assets/pencil-box.png' onClick={() => setOpenUpdateModal(item.name)}/>}
               <img className='buttons' onClick= { handleDelete(item.name) } src='/assets/delete.png' />
               </div>
             </div>
@@ -60,6 +62,7 @@ const ContentBuilder = ({ view }) => {
       }
       { openModal && <ChangeContentName view={view.name} setOpenModal={setOpenModal}/>}
       { openAddModal && <AddColumn view={view.name} setOpenModal={setOpenAddModal}/>}
+      { openUpdateModal && <UpdateColumn view={view.name} setOpenModal={setOpenUpdateModal} openUpdateModal={openUpdateModal}/>}
     </div>
       )
     : <div className='content-builder'>

@@ -54,3 +54,8 @@ export const ADD_FIELD = (name) => ({
   url: `/content/${name}/addField`,
   method: 'patch'
 });
+
+export const UPDATE_FIELD = (name) => ({
+  url: `/content/${name}/updateField`,
+  method: 'patch'
+});
