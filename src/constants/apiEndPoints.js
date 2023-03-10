@@ -44,3 +44,8 @@ export const GET_COLLECTIONS = {
   url: '/collection',
   method: 'get'
 };
+
+export const DELETE_FIELD = (name) => ({
+  url: `/content/${name}/deleteField`,
+  method: 'patch'
+});

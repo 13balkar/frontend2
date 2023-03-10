@@ -3,7 +3,7 @@ import './contentBuilder.css';
 import ChangeContentName from '../changeContentName';
 import propTypes from 'prop-types';
 import makeRequest from '../../utils/makeRequest';
-import { GET_CONTENT_BY_NAME } from '../../constants/apiEndPoints';
+import { GET_CONTENT_BY_NAME, DELETE_FIELD } from '../../constants/apiEndPoints';
 const ContentBuilder = ({ view }) => {
   const [content, setContent] = React.useState(null);
   const [openModal, setOpenModal] = React.useState(false);
@@ -23,7 +23,11 @@ const ContentBuilder = ({ view }) => {
     console.log(view.name);
     setOpenModal(true);
   };
-
+  const handleDelete = (name) => async () => {
+    if (localStorage.getItem('token') !== null) {
+      await makeRequest(DELETE_FIELD(view.name), { headers: { token: localStorage.getItem('token') }, data: { columnNames: [name] } });
+    }
+  };
   return content !== null
     ? (
     <div className='content-builder'>
@@ -46,7 +50,7 @@ const ContentBuilder = ({ view }) => {
               </div>
               <div className='part2'>
               <img className='buttons' src='/assets/pencil-box.png' />
-              <img className='buttons' src='/assets/delete.png' />
+              <img className='buttons' onClick= { handleDelete(item.name) } src='/assets/delete.png' />
               </div>
             </div>
           );
