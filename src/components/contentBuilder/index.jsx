@@ -1,12 +1,16 @@
 import React from 'react';
 import './contentBuilder.css';
+import ChangeContentName from '../changeContentName';
 import propTypes from 'prop-types';
 import makeRequest from '../../utils/makeRequest';
 import { GET_CONTENT_BY_NAME } from '../../constants/apiEndPoints';
 const ContentBuilder = ({ view }) => {
   const [content, setContent] = React.useState(null);
+  const [openModal, setOpenModal] = React.useState(false);
+
   const makeMap = { text: 'Aa', number: '123', email: '@', password: '*', json: '{}', array: '[]', string: 'Aa' };
   const colorMap = { text: '#7691ff', string: '#7691ff', number: '#d0c121', email: '#9f6be7', password: '#ff9a76', json: '#ff9a76', array: '#ff9a76' };
+
   React.useEffect(() => {
     if (localStorage.getItem('token') !== null) {
       makeRequest(GET_CONTENT_BY_NAME(view.name), { headers: { token: localStorage.getItem('token') } })
@@ -15,13 +19,17 @@ const ContentBuilder = ({ view }) => {
         });
     }
   }, [view]);
-  // console.log(content);
+  const changeName = async () => {
+    console.log(view.name);
+    setOpenModal(true);
+  };
+
   return content !== null
     ? (
     <div className='content-builder'>
       <div className='content-name'>
         <h1>{view.name}</h1>
-        <img src='/assets/pencil.png' className='button-pen' />
+        <img src='/assets/pencil.png' onClick={changeName} className='button-pen' />
       </div>
       <h2>{view.count} Fields</h2>
       <p className='add-types' >Add another field</p>
@@ -44,6 +52,7 @@ const ContentBuilder = ({ view }) => {
           );
         })
       }
+      { openModal && <ChangeContentName view={view.name} setOpenModal={setOpenModal}/>}
     </div>
       )
     : <div className='content-builder'>
