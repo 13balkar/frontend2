@@ -24,3 +24,18 @@ export const COLLECTION_ENTRIES = (name) => ({
   url: `/collection/${name}`,
   method: 'get'
 });
+
+export const POST_COLLECTION_ENTRIES = (name) => ({
+  url: `/collection/${name}`,
+  method: 'post'
+});
+
+export const DELETE_COLLECTION_ENTRIES = (name, id) => ({
+  url: `/collection/${name}/${id}`,
+  method: 'delete'
+});
+
+export const UPDATE_COLLECTION_ENTRIES = (name, id) => ({
+  url: `/collection/${name}/${id}`,
+  method: 'put'
+});

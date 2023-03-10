@@ -1,12 +1,13 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import EntryCard from '../entryCard';
+import CreateEntry from '../createEntry';
 import makeRequest from '../../utils/makeRequest';
 import { COLLECTION_ENTRIES } from '../../constants/apiEndPoints';
 import './collection.css';
 const Collection = ({ view }) => {
   const [entries, setEntries] = React.useState(null);
-
+  const [openModal, setOpenModal] = React.useState(false);
   React.useEffect(() => {
     if (localStorage.getItem('token') !== null) {
       makeRequest(COLLECTION_ENTRIES(view), { headers: { token: localStorage.getItem('token') } })
@@ -49,7 +50,7 @@ const Collection = ({ view }) => {
         </div>
         <div className='add-new'>
           <h1>{entries.length} Entries Found</h1>
-          <p>Add a new Entry</p>
+          <p onClick={ () => setOpenModal(true) } >Add a new Entry</p>
         </div>
         { entries.length > 0 && headings}
         { entries.length > 0 && entries.map((entry, index) => {
@@ -57,6 +58,7 @@ const Collection = ({ view }) => {
             <EntryCard key={index} entry={entry} headings={setHeadingValues(entries)} />
           );
         })}
+        { openModal && <CreateEntry view={view} setOpenModal={setOpenModal}/>}
       </div>
       )
     : (

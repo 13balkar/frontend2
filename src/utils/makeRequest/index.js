@@ -8,6 +8,7 @@ const makeRequest = async (apiEndPoint, dynamicConfig) => {
       method: apiEndPoint.method,
       ...dynamicConfig
     };
+    // console.log(requestConfig);
     const { data } = await axios(requestConfig);
     return data;
   } catch (error) {
