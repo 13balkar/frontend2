@@ -28,8 +28,9 @@ const CreateEntry = ({ view, setOpenModal, entry }) => {
     inputs.forEach(input => {
       eData[input.previousSibling.innerHTML] = input.value;
     });
-    const response = await makeRequest(UPDATE_COLLECTION_ENTRIES(view, entry.id), { headers: { token: localStorage.getItem('token') }, data: { entryData: eData } });
-    console.log(response);
+    await makeRequest(UPDATE_COLLECTION_ENTRIES(view, entry.id), { headers: { token: localStorage.getItem('token') }, data: { entryData: eData } });
+    // console.log(response);
+    setOpenModal(false);
   };
 
   return (

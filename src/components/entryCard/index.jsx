@@ -7,8 +7,8 @@ import { DELETE_COLLECTION_ENTRIES } from '../../constants/apiEndPoints';
 const EntryCard = ({ entry, headings }) => {
   const [openModal, setOpenModal] = React.useState(false);
   const handleDelete = async () => {
-    const response = await makeRequest(DELETE_COLLECTION_ENTRIES(entry.collection_name, entry.id), { headers: { token: localStorage.getItem('token') } });
-    console.log(response);
+    await makeRequest(DELETE_COLLECTION_ENTRIES(entry.collection_name, entry.id), { headers: { token: localStorage.getItem('token') } });
+    // console.log(response);
   };
   return (
     <div className='entry-card'>
