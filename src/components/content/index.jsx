@@ -1,6 +1,7 @@
 import React from 'react';
 import './content.css';
 import makeRequest from '../../utils/makeRequest';
+import ContentBuilder from '../contentBuilder';
 import { GET_COLLECTIONS } from '../../constants/apiEndPoints';
 const Content = () => {
   const [names, setNames] = React.useState(null);
@@ -40,7 +41,7 @@ const Content = () => {
           <p className='add-type'onClick={handleAdd} >+ New Type</p>
           { Object.keys(names).map((item, index) => {
             return (
-                <div className='content-item' onClick={() => setView(item)} key={index}>
+                <div className='content-item' onClick={() => setView({ name: item, count: names[item] })} key={index}>
                   <p>{item}</p>
                   <p>{names[item]}</p>
                 </div>
@@ -48,9 +49,7 @@ const Content = () => {
           })
           }
         </div>
-        { view && <div className='content-builder'>
-          <h1>Hello</h1>
-        </div>}
+        { view && <ContentBuilder view={view} /> }
       </div>
     </div>
       )
