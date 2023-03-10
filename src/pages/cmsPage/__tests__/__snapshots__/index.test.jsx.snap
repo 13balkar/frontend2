@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cms should render the cms 1`] = `
+<DocumentFragment>
+  <div
+    class="cms"
+  >
+    <div
+      class="navbar"
+    >
+      <div
+        class="heading"
+      >
+        <h1>
+          CMS+
+        </h1>
+      </div>
+      <div
+        class="list"
+      >
+        <p>
+          COLLECTION TYPES
+        </p>
+      </div>
+      <div
+        class="builder"
+      >
+        <p>
+          CONTENT TYPE BUILDER
+        </p>
+      </div>
+    </div>
+    <div
+      class="contents"
+    >
+      <div
+        class="content-heading"
+      >
+        <h1>
+          Content Types
+        </h1>
+      </div>
+      <div
+        class="content-body"
+      >
+        <div
+          class="content-list"
+        />
+        <div
+          class="content-builder"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Cms should render the cms with a view 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <div
+      class="heading"
+    >
+      <h1>
+        CMS+
+      </h1>
+    </div>
+    <div
+      class="list"
+    >
+      <p>
+        COLLECTION TYPES
+      </p>
+    </div>
+    <div
+      class="builder"
+    >
+      <p>
+        CONTENT TYPE BUILDER
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Homepage should render the homepage 1`] = `
+<DocumentFragment>
+  <div
+    class="cms"
+  >
+    <div
+      class="navbar"
+    >
+      <div
+        class="heading"
+      >
+        <h1>
+          CMS+
+        </h1>
+      </div>
+      <div
+        class="list"
+      >
+        <p>
+          COLLECTION TYPES
+        </p>
+      </div>
+      <div
+        class="builder"
+      >
+        <p>
+          CONTENT TYPE BUILDER
+        </p>
+      </div>
+    </div>
+    <div
+      class="contents"
+    >
+      <div
+        class="content-heading"
+      >
+        <h1>
+          Content Types
+        </h1>
+      </div>
+      <div
+        class="content-body"
+      >
+        <div
+          class="content-list"
+        />
+        <div
+          class="content-builder"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

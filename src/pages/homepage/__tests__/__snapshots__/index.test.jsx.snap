@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage should render the homepage 1`] = `
+<DocumentFragment>
+  <div
+    class="homepage"
+  >
+    <div
+      class="login-image"
+    >
+      <div
+        class="content"
+      >
+        <h1>
+          Design APIs fast,
+        </h1>
+        <h1>
+          Manage content easily
+        </h1>
+      </div>
+      <img
+        alt=""
+        src="assets/background.png"
+      />
+    </div>
+    <div
+      class="login-box"
+    >
+      <h1>
+        Login to your CMS+ account
+      </h1>
+      <div
+        class="card"
+      >
+        <label>
+          Email
+        </label>
+        <input
+          type="text"
+          value=""
+        />
+        <label>
+          Password
+        </label>
+        <input
+          type="password"
+          value=""
+        />
+        <button>
+          Login
+        </button>
+        <div
+          class="links"
+        >
+          <p>
+            Forgot password?
+          </p>
+          <p>
+            Create an account
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

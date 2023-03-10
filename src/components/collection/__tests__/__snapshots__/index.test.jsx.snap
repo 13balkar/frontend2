@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collection should render the collection 1`] = `
+<DocumentFragment>
+  <div
+    class="collection"
+  >
+    <div
+      class="collection-name"
+    >
+      <h1 />
+    </div>
+  </div>
+</DocumentFragment>
+`;

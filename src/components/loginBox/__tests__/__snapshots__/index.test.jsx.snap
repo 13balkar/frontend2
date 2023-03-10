@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginBox should render the loginBox 1`] = `
+<DocumentFragment>
+  <div
+    class="login-box"
+  >
+    <h1>
+      Login to your CMS+ account
+    </h1>
+    <div
+      class="card"
+    >
+      <label>
+        Email
+      </label>
+      <input
+        type="text"
+        value=""
+      />
+      <label>
+        Password
+      </label>
+      <input
+        type="password"
+        value=""
+      />
+      <button>
+        Login
+      </button>
+      <div
+        class="links"
+      >
+        <p>
+          Forgot password?
+        </p>
+        <p>
+          Create an account
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

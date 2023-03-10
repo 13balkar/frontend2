@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage should render the homepage 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <div
+      class="heading"
+    >
+      <h1>
+        CMS+
+      </h1>
+    </div>
+    <div
+      class="list"
+    >
+      <p>
+        COLLECTION TYPES
+      </p>
+    </div>
+    <div
+      class="builder"
+    >
+      <p>
+        CONTENT TYPE BUILDER
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navbar should render the navbar 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <div
+      class="heading"
+    >
+      <h1>
+        CMS+
+      </h1>
+    </div>
+    <div
+      class="list"
+    >
+      <p>
+        COLLECTION TYPES
+      </p>
+    </div>
+    <div
+      class="builder"
+    >
+      <p>
+        CONTENT TYPE BUILDER
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Navbar should render the navbar with names 1`] = `
+<DocumentFragment>
+  <div
+    class="navbar"
+  >
+    <div
+      class="heading"
+    >
+      <h1>
+        CMS+
+      </h1>
+    </div>
+    <div
+      class="list"
+    >
+      <p>
+        COLLECTION TYPES
+      </p>
+    </div>
+    <div
+      class="builder"
+    >
+      <p>
+        CONTENT TYPE BUILDER
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

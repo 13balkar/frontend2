@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage should render the homepage 1`] = `
+<DocumentFragment>
+  <div
+    class="login-image"
+  >
+    <div
+      class="content"
+    >
+      <h1>
+        Design APIs fast,
+      </h1>
+      <h1>
+        Manage content easily
+      </h1>
+    </div>
+    <img
+      alt=""
+      src="assets/background.png"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`LoginImage should render the loginImage 1`] = `
+<DocumentFragment>
+  <div
+    class="login-image"
+  >
+    <div
+      class="content"
+    >
+      <h1>
+        Design APIs fast,
+      </h1>
+      <h1>
+        Manage content easily
+      </h1>
+    </div>
+    <img
+      alt=""
+      src="assets/background.png"
+    />
+  </div>
+</DocumentFragment>
+`;
