@@ -39,7 +39,7 @@ const Content = () => {
         });
     }
   }, []);
-  console.log(names);
+  // console.log(names);
   const handleAdd = () => {
     setOpenModal(true);
     setView(null);

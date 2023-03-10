@@ -1,14 +1,16 @@
 import React from 'react';
 import './contentBuilder.css';
 import ChangeContentName from '../changeContentName';
+import AddColumn from '../AddField';
 import propTypes from 'prop-types';
 import makeRequest from '../../utils/makeRequest';
 import { GET_CONTENT_BY_NAME, DELETE_FIELD } from '../../constants/apiEndPoints';
 const ContentBuilder = ({ view }) => {
   const [content, setContent] = React.useState(null);
   const [openModal, setOpenModal] = React.useState(false);
+  const [openAddModal, setOpenAddModal] = React.useState(false);
 
-  const makeMap = { text: 'Aa', number: '123', email: '@', password: '*', json: '{}', array: '[]', string: 'Aa' };
+  const makeMap = { text: 'Aa', number: '12', email: '@ ', password: '* ', json: '{}', array: '[]', string: 'Aa' };
   const colorMap = { text: '#7691ff', string: '#7691ff', number: '#d0c121', email: '#9f6be7', password: '#ff9a76', json: '#ff9a76', array: '#ff9a76' };
 
   React.useEffect(() => {
@@ -36,7 +38,7 @@ const ContentBuilder = ({ view }) => {
         <img src='/assets/pencil.png' onClick={changeName} className='button-pen' />
       </div>
       <h2>{view.count} Fields</h2>
-      <p className='add-types' >Add another field</p>
+      <p className='add-types' onClick={() => setOpenAddModal(true)}>Add another field</p>
       {
         content.columns.map((item, index) => {
           return (
@@ -57,6 +59,7 @@ const ContentBuilder = ({ view }) => {
         })
       }
       { openModal && <ChangeContentName view={view.name} setOpenModal={setOpenModal}/>}
+      { openAddModal && <AddColumn view={view.name} setOpenModal={setOpenAddModal}/>}
     </div>
       )
     : <div className='content-builder'>

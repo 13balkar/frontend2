@@ -49,3 +49,8 @@ export const DELETE_FIELD = (name) => ({
   url: `/content/${name}/deleteField`,
   method: 'patch'
 });
+
+export const ADD_FIELD = (name) => ({
+  url: `/content/${name}/addField`,
+  method: 'patch'
+});
