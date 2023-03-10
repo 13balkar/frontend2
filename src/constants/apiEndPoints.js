@@ -39,3 +39,8 @@ export const UPDATE_COLLECTION_ENTRIES = (name, id) => ({
   url: `/collection/${name}/${id}`,
   method: 'put'
 });
+
+export const GET_COLLECTIONS = {
+  url: '/collection',
+  method: 'get'
+};

@@ -20,7 +20,7 @@ const Navbar = ({ view, setView }) => {
         <h1>CMS+</h1>
       </div>
       <div className='list'>
-        <p onClick={() => setView('collection') }>COLLECTION TYPES</p>
+        <p>COLLECTION TYPES</p>
         {
           names !== null && names.map((item, index) => {
             return (
